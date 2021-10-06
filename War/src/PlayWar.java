@@ -12,6 +12,7 @@ public class PlayWar
 	static boolean won = false;
 	static int playerOneCounter = 0;
 	static int playerTwoCounter = 0;
+	static int timesPlayed = 0;
 	
 		public static void main(String[] args)
 			{
@@ -21,26 +22,13 @@ public class PlayWar
 			Deck.shuffle();
 			dealCards();
 			
-			while(won == false)
+			for(int i = 0; i < 27; i++)
 				{
 				pullCardPlayerOne();
 				pullCardPlayerTwo();
 				chooseBiggerValue();
-				if(playerOneCounter == 14)
-					{
-					won = true;
-					Design.winner();
-					}
-				if(playerTwoCounter == 14)
-					{
-					won=true;
-					Design.winner();
-					}
-				}		
-			//each player gets 26 cards DONE
-			//two face down decks. players pull a card. flip it over. Largest value wins. winner
-			//if tie, place another card down each. largest value wins. 
-			//at the end of the game person with most points wins
+				}	
+			isWon();
 			}
 		public static void dealCards()
 			{
@@ -68,7 +56,6 @@ public class PlayWar
 			playerTwoName = userStringInput.nextLine();
 			System.out.println();
 			}
-
 		public static void pullCardPlayerOne()
 			{
 			System.out.println(playerOneName + "'s Card");
@@ -77,6 +64,7 @@ public class PlayWar
 			valueOne = playerOneHand.get(0).getValue();
 			System.out.println();
 			playerOneHand.remove(0);
+			timesPlayed++;
 			}
 		public static void pullCardPlayerTwo()
 			{
@@ -85,21 +73,40 @@ public class PlayWar
 			System.out.println(playerTwoHand.get(0).getSuit());
 			valueTwo = playerTwoHand.get(0).getValue();
 			playerTwoHand.remove(0);
+			System.out.println();
 			}
 		public static void chooseBiggerValue()
 			{
 			if(valueOne>valueTwo)
 				{
-				System.out.println();
 				System.out.println(playerOneName + " won this round!");
+				System.out.println("_____________________________________________________________");
 				playerOneCounter++;	
+				System.out.println();
 				}
 			else
 				{
 				System.out.println();
 				System.out.println(playerTwoName + " won this round!");
+				System.out.println("_____________________________________________________________");
 				playerTwoCounter++;	
 				System.out.println();
 				}
+			}
+		public static void isWon()
+			{
+			if(playerOneCounter> playerTwoCounter)
+				{
+				Design.winner();	
+				won = true;
+				System.out.println(playerOneName + " WON THE GAME!");
+				}
+			else
+				{
+				Design.winner();	
+				won = true;
+				System.out.println(playerTwoName + " WON THE GAME!");
+				}
+				
 			}
 	}
