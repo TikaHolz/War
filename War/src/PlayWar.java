@@ -22,7 +22,7 @@ public class PlayWar
 			Deck.shuffle();
 			dealCards();
 			
-			for(int i = 0; i < 27; i++)
+			for(int i = 0; i < 26; i++)
 				{
 				pullCardPlayerOne();
 				pullCardPlayerTwo();
@@ -33,13 +33,13 @@ public class PlayWar
 		public static void dealCards()
 			{
 			//player one hand
-			for(int i = 0; i < ((Deck.deck.size())/2); i++)
+			for(int i = 0; i < 26; i++)
 				{
 				playerOneHand.add(Deck.deck.get(0));
 				Deck.deck.remove(0);
 				}
 			//player two hand
-			for(int i = 0; i < ((Deck.deck.size())/2); i++)
+			for(int i = 0; i < 26; i++)
 				{
 				playerTwoHand.add(Deck.deck.get(0));
 				Deck.deck.remove(0);
