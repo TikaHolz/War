@@ -27,6 +27,7 @@ public class PlayWar
 				pullCardPlayerOne();
 				pullCardPlayerTwo();
 				chooseBiggerValue();
+				Design.explosive();
 				wins();
 				enter();
 				}	
@@ -82,7 +83,7 @@ public class PlayWar
 			if(valueOne>valueTwo)
 				{
 				System.out.println(playerOneName + " won this round!");
-				System.out.println("_____________________________________________________________");
+				//System.out.println("_____________________________________________________________");
 				playerOneCounter++;	
 				System.out.println();
 				}
@@ -90,7 +91,7 @@ public class PlayWar
 				{
 				System.out.println();
 				System.out.println(playerTwoName + " won this round!");
-				System.out.println("_____________________________________________________________");
+				//System.out.println("_____________________________________________________________");
 				playerTwoCounter++;
 				System.out.println();
 				}

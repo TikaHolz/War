@@ -23,8 +23,20 @@ public class Design
 	        System.out.println("  ~*~@~*~@~*~   ");
 	    	System.out.println("  ~*~@smd@~*~                     #$#$#   ");
 	    	System.out.println(" ~*~@~*~@~*~                     #$#$#$#  ");
-	    	System.out.println("    ~@~*~@~                       #$#$#   ");
+	    	System.out.println("    ~@~*~@~                       #$#$#  ");
 
 		}
+		
+		
+		
+		public static void explosive()
+			{
+				System.out.println("                                                    c=====e");
+				System.out.println("                                                       H");
+				System.out.println(" ____________                                       ___H__");
+				System.out.println("(__((__((___()                                    //|     |");
+				System.out.println("(__((__((___()()__________________________________//|     |");
+				System.out.println("(__((__((___()()()---------------------------------'|_____|");
+			}
 
 	}
