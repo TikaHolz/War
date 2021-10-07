@@ -27,6 +27,7 @@ public class PlayWar
 				pullCardPlayerOne();
 				pullCardPlayerTwo();
 				chooseBiggerValue();
+				wins();
 				enter();
 				}	
 			isWon();
@@ -61,9 +62,8 @@ public class PlayWar
 			}
 		public static void pullCardPlayerOne()
 			{
-			System.out.println(playerOneName + "'s Card");
-			System.out.println(playerOneHand.get(0).getRank());
-			System.out.println(playerOneHand.get(0).getSuit());
+			System.out.println(playerOneName + "'s Card:");
+			System.out.println(playerOneHand.get(0).getRank() + " " + playerOneHand.get(0).getSuit());
 			valueOne = playerOneHand.get(0).getValue();
 			System.out.println();
 			playerOneHand.remove(0);
@@ -71,9 +71,8 @@ public class PlayWar
 			}
 		public static void pullCardPlayerTwo()
 			{
-			System.out.println(playerTwoName + "'s Card");
-			System.out.println(playerTwoHand.get(0).getRank());
-			System.out.println(playerTwoHand.get(0).getSuit());
+			System.out.println(playerTwoName + "'s Card:");
+			System.out.println(playerTwoHand.get(0).getRank() + " " + playerTwoHand.get(0).getSuit());
 			valueTwo = playerTwoHand.get(0).getValue();
 			playerTwoHand.remove(0);
 			System.out.println();
@@ -92,8 +91,27 @@ public class PlayWar
 				System.out.println();
 				System.out.println(playerTwoName + " won this round!");
 				System.out.println("_____________________________________________________________");
-				playerTwoCounter++;	
+				playerTwoCounter++;
 				System.out.println();
+				}
+			}
+		public static void wins()
+			{
+			if(playerOneCounter > 1 || playerOneCounter == 0)
+				{
+				System.out.println(playerOneName + " has " + playerOneCounter + " wins");
+				}
+			else
+				{
+				System.out.println(playerOneName + " has " + playerOneCounter + " win");	
+				}
+			if(playerTwoCounter > 1 || playerTwoCounter == 0)
+				{
+				System.out.println(playerTwoName + " has " + playerTwoCounter + " wins");
+				}
+			else
+				{
+				System.out.println(playerTwoName + " has " + playerTwoCounter + " win");	
 				}
 			}
 		public static void enter()
