@@ -37,6 +37,7 @@ public class Design
 				System.out.println("(__((__((___()                                    //|     |");
 				System.out.println("(__((__((___()()__________________________________//|     |");
 				System.out.println("(__((__((___()()()---------------------------------'|_____|");
+				System.out.println();
 			}
 
 	}

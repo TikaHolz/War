@@ -29,6 +29,7 @@ public class PlayWar
 				chooseBiggerValue();
 				Design.explosive();
 				wins();
+				System.out.println();
 				enter();
 				}	
 			isWon();
@@ -85,15 +86,12 @@ public class PlayWar
 				System.out.println(playerOneName + " won this round!");
 				//System.out.println("_____________________________________________________________");
 				playerOneCounter++;	
-				System.out.println();
 				}
 			else
 				{
-				System.out.println();
 				System.out.println(playerTwoName + " won this round!");
 				//System.out.println("_____________________________________________________________");
 				playerTwoCounter++;
-				System.out.println();
 				}
 			}
 		public static void wins()
