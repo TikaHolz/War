@@ -27,9 +27,12 @@ public class PlayWar
 				pullCardPlayerOne();
 				pullCardPlayerTwo();
 				chooseBiggerValue();
+				enter();
 				}	
 			isWon();
 			}
+		
+		
 		public static void dealCards()
 			{
 			//player one hand
@@ -93,19 +96,26 @@ public class PlayWar
 				System.out.println();
 				}
 			}
+		public static void enter()
+			{
+			Scanner userInput = new Scanner(System.in);
+			System.out.println("Hit enter to go to the next round");
+			String enter = userInput.nextLine();
+			
+			}
 		public static void isWon()
 			{
 			if(playerOneCounter> playerTwoCounter)
 				{
 				Design.winner();	
 				won = true;
-				System.out.println(playerOneName + " WON THE GAME!");
+				System.out.println("                "+ playerOneName + " WON THE GAME!");
 				}
 			else
 				{
 				Design.winner();	
 				won = true;
-				System.out.println(playerTwoName + " WON THE GAME!");
+				System.out.println("                "+ playerTwoName + " WON THE GAME!");
 				}
 				
 			}
